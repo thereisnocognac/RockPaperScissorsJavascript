@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="theGame()">Are you ready to play?</button>
+
+    <script>
+        function computerPlay() {
+            let computerSelection = '';
+            let randomInt = Math.floor(Math.random() * 3);
+            if (randomInt === 0) {
+                computerSelection = 'Rock';
+            }
+            else if (randomInt === 1) {
+                computerSelection = 'Paper';
+            }
+            else {
+                computerSelection = 'Scissors';
+            }
+            return computerSelection;
+        }
+
+        function theGame() {
+            let playerChoice = prompt('Your choice?', 'Rock, Paper, Scissors?')
+            let playerChoiceFix = playerChoice.toLowerCase().trim();
+            let computerSelectionFix = computerPlay().toLowerCase();
+            let roundDraw = 'We have a tie!!!'
+            let roundLost = 'The Computer won this round!!!'
+            let roundWon = 'You won this round!!!'
+
+            if (playerChoiceFix === 'rock' && computerSelectionFix === 'paper') {
+                return 'The Computer won this round!!!'
+            } else if (playerChoiceFix === 'rock' && computerSelectionFix === 'rock') {
+                return 'We have a tie!!!'
+            } else if (playerChoiceFix === 'rock' && computerSelectionFix === 'scissors') {
+                return 'You won this round!!!'
+            } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'scissors') {
+                return 'The Computer won this round!!!'
+            } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'paper') {
+                return 'We have a tie!!!'
+            } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'rock') {
+                return 'You won this round!!!'
+            } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'rock') {
+                return 'The Computer won this round!!!'
+            } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'scissors') {
+                return 'We have a tie!!!'
+            } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'paper') {
+                return 'You won this round!!!'
+            } else {
+                return 'That is not a Paper, Rock, or neither a pair of Scissors!!!'
+            }
+        }
+    </script>
+</body>
+
+</html>
