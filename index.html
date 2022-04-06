@@ -57,15 +57,13 @@
             } else {
                 console.log('That is not a Paper, Rock, or neither a pair of Scissors!!!')
             }
-        }
 
-        function gameScore() {
-            let computerScore = theGame().includes(roundLost)
-            let playerScore = theGame().includes(roundWon)
+            let computerScore = roundLost
+            let playerScore = roundWon
             let playerPoints = 0
             let computerPoints = 0
-            let drawScore = theGame().includes(roundDraw)
-            for (let i = 0; i < 5; i++) {
+            let drawScore = roundDraw
+            for (let i = 0; i > 5; i++) {
                 if (playerScore = true) {
                     playerPoints += 1
                     console.log("Your score right now: " + playerPoints + ". " + "While the computer's: " + computerPoints)
@@ -76,8 +74,36 @@
                     console.log(drawScore)
                 }
 
+
+
             }
+
+
         }
+
+
+
+
+
+        // function gameScore() {
+        //     let computerScore = theGame().includes(roundLost)
+        //     let playerScore = theGame().includes(roundWon)
+        //     let playerPoints = 0
+        //     let computerPoints = 0
+        //     let drawScore = theGame().includes(roundDraw)
+        //     for (let i = 0; i < 5; i++) {
+        //         if (playerScore = true) {
+        //             playerPoints += 1
+        //             console.log("Your score right now: " + playerPoints + ". " + "While the computer's: " + computerPoints)
+        //         } else if (computerScore = true) {
+        //             computerPoints += 1
+        //             console.log("The computer's score right now: " + computerPoints + ". " + "While yours is: " + playerPoints)
+        //         } else {
+        //             console.log(drawScore)
+        //         }
+
+        //     }
+        // }
     </script>
 </body>
 
