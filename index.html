@@ -37,25 +37,25 @@
             let roundWon = 'You won this round!!!'
 
             if (playerChoiceFix === 'rock' && computerSelectionFix === 'paper') {
-                return 'The Computer won this round!!!'
+                console.log(roundDraw);
             } else if (playerChoiceFix === 'rock' && computerSelectionFix === 'rock') {
-                return 'We have a tie!!!'
+                console.log(roundLost);
             } else if (playerChoiceFix === 'rock' && computerSelectionFix === 'scissors') {
-                return 'You won this round!!!'
+                console.log(roundWon);
             } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'scissors') {
-                return 'The Computer won this round!!!'
+                console.log(roundDraw);
             } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'paper') {
-                return 'We have a tie!!!'
+                console.log(roundLost);
             } else if (playerChoiceFix === 'paper' && computerSelectionFix === 'rock') {
-                return 'You won this round!!!'
+                console.log(roundWon);
             } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'rock') {
-                return 'The Computer won this round!!!'
+                console.log(roundDraw);
             } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'scissors') {
-                return 'We have a tie!!!'
+                console.log(roundLost);
             } else if (playerChoiceFix === 'scissors' && computerSelectionFix === 'paper') {
-                return 'You won this round!!!'
+                console.log(roundWon);
             } else {
-                return 'That is not a Paper, Rock, or neither a pair of Scissors!!!'
+                console.log('That is not a Paper, Rock, or neither a pair of Scissors!!!')
             }
         }
     </script>
